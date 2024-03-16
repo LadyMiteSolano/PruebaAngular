@@ -1,0 +1,12 @@
+
+<div class="container">
+  <div>
+    <ul class="list-group list-group-flush" *ngFor="let Items of ItemsPorRol">
+
+        <button class="list-group-item">
+          <i class="bi bi-{{Items.icon}}"></i>
+          {{ Items.opc}}
+        </button>
+
+    </ul>
+  </div>

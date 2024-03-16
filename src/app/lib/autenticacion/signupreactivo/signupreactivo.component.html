@@ -1,0 +1,42 @@
+<div class="form-control w-50 position-absolute start-50 top-50 translate-middle">
+  <div>
+      <h2>Registro de usuario</h2>
+  </div>
+  <form (ngSubmit)="signup()" (formGroup)="frmGroupValidador">
+      <div>
+          <label for="emailuser">Nombre: </label>
+          <input type="text" class="form-control"
+             formControlName="nombre" id="nombreusuario"/>
+      </div>
+      <div *ngIf="frmGroupValidador.get('nombre')?.touched &&
+      frmGroupValidador.get('nombre')?.errors?.['required']"> ESTE VALOR ES REQUERIDO</div>
+      <div>
+          <label for="emailuser">Apellido: </label>
+          <input type="text" class="form-control"
+              id="apellidousuario" formControlName="apellido"/>
+      </div>
+      <div>
+          <label for="emailuser">Celular: </label>
+          <input type="text" class="form-control"
+              id="celularusuario" />
+      </div>
+      <div>
+          <label for="emailuser">Email: </label>
+          <input type="email" class="form-control"
+              id="emailuser" />
+      </div>
+      <div>
+          <label for="emailuser">Contraseña: </label>
+          <input type="password" class="form-control"
+              id="passwordusuario" />
+      </div>
+      <div class="mb-3">
+          <label for="emailuser">Confirme Contraseña: </label>
+          <input type="password" class="form-control"
+              id="confirmpassworduser" />
+      </div>
+      <button type="submit" class="m-3 btn btn-success">
+          Registrar
+      </button>
+  </form>
+</div>

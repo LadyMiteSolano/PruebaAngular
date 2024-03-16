@@ -1,0 +1,36 @@
+<div>
+  <h2>Registro de usuario</h2>
+</div>
+<form method="get" (ngSubmit)="signup()">
+<div>
+  <label for="emailuser">Nombre: </label>
+  <input type="text" class="form-control" [(ngModel)]="nombre" id="nombreusuario" name="nomrbreusuario" />
+</div>
+<div>
+  <label for="emailuser">Apellido: </label>
+  <input type="text" class="form-control" [(ngModel)]="apellido" [ngModelOptions]="{standalone: true}"
+    id="apellidousuario" />
+</div>
+<div>
+  <label for="emailuser">Celular: </label>
+  <input type="text" class="form-control" [(ngModel)]="celular" [ngModelOptions]="{standalone: true}"
+    id="celularusuario" />
+</div>
+<div>
+  <label for="emailuser">Email: </label>
+</div>
+<div>
+  <label for="emailuser">Contraseña: </label>
+  <input type="password" class="form-control" [(ngModel)]="password" [ngModelOptions]="{standalone: true}"
+    id="passwordusuario" />
+</div>
+<div class="mb-3">
+  <label for="emailuser">Confirme Contraseña: </label>
+  <input type="password" class="form-control" [(ngModel)]="passwordConfirm" [ngModelOptions]="{standalone: true}"
+    id="confirmpassworduser" />
+</div>
+<button type="submit" class="m-3 btn btn-success">
+  Registrar
+</button>
+<input type="button" class="m-3 btn btn-success" (click)="volver()" value="Volver al login" />
+</form>
